@@ -1,5 +1,6 @@
 import numpy as np;
 
+#sigmoid used as activation function
 def sigmoid(z):
 	return 1 / (1 + np.exp(-z))
 
@@ -51,6 +52,7 @@ def optimize(w, b, X, Y, num_iterations, learning_rate):
     return parameters, gradients, costs
 
 def predict(w, b, X):
+    # m is number of training sets
     m = X.shape[1]
     w = w.reshape(X.shape[0], 1)
     A = get_prediction(w, b, X)
