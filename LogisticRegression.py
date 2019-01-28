@@ -4,7 +4,7 @@ import numpy as np;
 def sigmoid(z):
 	return 1 / (1 + np.exp(-z))
 
-def get_prediction(w, b, X):
+def get_activation(w, b, X):
 	return sigmoid(np.dot(w.T,X) + b)
 
 def initialize(dim):
@@ -16,7 +16,7 @@ def initialize(dim):
 def propagate(w, b, X, Y):
     # m is number of training sets
     m = X.shape[1]
-    A = get_prediction(w, b, X)
+    A = get_activation(w, b, X)
     cost = np.sum(-(Y*np.log(A) + (1 - Y)*np.log(1 - A))) / m
     dZ = A - Y
     dw = np.dot(X, dZ.T) / m
@@ -55,7 +55,7 @@ def predict(w, b, X):
     # m is number of training sets
     m = X.shape[1]
     w = w.reshape(X.shape[0], 1)
-    A = get_prediction(w, b, X)
+    A = get_activation(w, b, X)
     
     Y_prediction = np.array([np.where(A[0] <= 0.5, 0, 1)])
     return Y_prediction
