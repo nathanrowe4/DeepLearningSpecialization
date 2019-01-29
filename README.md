@@ -1,4 +1,4 @@
 Two Layer Neural Network Results:
 
 Dataset 1:
-![alt text](D:\DeepLearning\Blobs.png)
+![Alt text](Blobs.png?raw=true "Dataset 1")
