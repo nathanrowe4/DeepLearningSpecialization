@@ -1,3 +1,5 @@
+import numpy as np;
+
 def layer_sizes(X, Y):
     n_x = X.shape[0] # size of input layer
     n_h = 4 #size of hidden layer
