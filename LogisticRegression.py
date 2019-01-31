@@ -8,7 +8,7 @@ def execute_activation(w, b, X):
 	return sigmoid(np.dot(w.T,X) + b)
 
 def initialize(dim):
-    #initialize hyperparameters
+    #initialize parameters
     w = np.zeros((dim,1))
     b = 0
     return w, b
