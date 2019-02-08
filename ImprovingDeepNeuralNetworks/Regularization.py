@@ -18,7 +18,6 @@ def compute_cost_with_regularization(A3, Y, parameters, lambd):
     L2_regularization_cost = (lambd / 2) * (np.sum(np.square(W1)) + np.sum(np.square(W2)) + np.sum(np.square(W3))) / m
     
     cost = cross_entropy_cost + L2_regularization_cost
-    
     return cost
 
 def backward_propagation_with_regularization(X, Y, cache, lambd):
