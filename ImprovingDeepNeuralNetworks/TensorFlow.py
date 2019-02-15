@@ -49,7 +49,7 @@ def compute_cost(Z3, Y):
     return cost
 
 def model(X_train, Y_train, X_test, Y_test, learning_rate = 0.0001,
-          num_epochs = 1500, minibatch_size = 32, print_cost = True):
+          num_epochs = 1500, minibatch_size = 32):
     (n_x, m) = X_train.shape
     n_y = Y_train.shape[0]
     costs = []
